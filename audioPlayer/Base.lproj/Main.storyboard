@@ -16,15 +16,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="bfW-n5-oQ7">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="jgJ-8a-I92">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bfW-n5-oQ7" id="qze-fY-iJw">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jgJ-8a-I92" id="t9x-lf-5hM">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="fG8-v6-oUI" kind="show" id="ax1-CV-fRU"/>
+                                    <segue destination="fG8-v6-oUI" kind="show" identifier="detail" id="ml0-rr-X45"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -33,7 +33,7 @@
                             <outlet property="delegate" destination="pPl-rP-Shh" id="8jS-ck-IC4"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Audio Player" id="SeW-vW-Ctm"/>
+                    <navigationItem key="navigationItem" title="Jorge Drexler list" id="SeW-vW-Ctm"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bQ4-Qb-sch" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -117,7 +117,6 @@
                                 </connections>
                             </slider>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="quh-ud-3d0" firstAttribute="top" secondItem="Is2-sH-Vvg" secondAttribute="bottom" constant="66" id="0qx-bu-FFE"/>
                             <constraint firstItem="1HD-Qo-csP" firstAttribute="top" secondItem="quh-ud-3d0" secondAttribute="bottom" constant="258" id="1Md-Yn-zyt"/>
@@ -200,7 +199,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dd9-9J-26l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="919.5" y="354"/>
+            <point key="canvasLocation" x="982.5" y="354"/>
         </scene>
     </scenes>
 </document>
