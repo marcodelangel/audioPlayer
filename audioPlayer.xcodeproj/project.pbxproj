@@ -17,6 +17,8 @@
 		FD02C3E51DA0996D0062C71E /* noctiluca.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FD02C3E41DA0996D0062C71E /* noctiluca.jpg */; };
 		FD02C3E71DA099790062C71E /* latrama.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FD02C3E61DA099790062C71E /* latrama.jpg */; };
 		FD02C3E91DA09B980062C71E /* LaTrama.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FD02C3E81DA09B980062C71E /* LaTrama.mp3 */; };
+		FD02C3EB1DA0B1A60062C71E /* UnaCancion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FD02C3EA1DA0B1A60062C71E /* UnaCancion.mp3 */; };
+		FD02C3ED1DA0B1F80062C71E /* unaCancion.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FD02C3EC1DA0B1F80062C71E /* unaCancion.jpg */; };
 		FD4A63F11D9B67D600FD047A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4A63F01D9B67D600FD047A /* AppDelegate.swift */; };
 		FD4A63F61D9B67D600FD047A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD4A63F41D9B67D600FD047A /* Main.storyboard */; };
 		FD4A63F81D9B67D600FD047A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD4A63F71D9B67D600FD047A /* Assets.xcassets */; };
@@ -36,6 +38,8 @@
 		FD02C3E41DA0996D0062C71E /* noctiluca.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = noctiluca.jpg; sourceTree = "<group>"; };
 		FD02C3E61DA099790062C71E /* latrama.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = latrama.jpg; sourceTree = "<group>"; };
 		FD02C3E81DA09B980062C71E /* LaTrama.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = LaTrama.mp3; sourceTree = "<group>"; };
+		FD02C3EA1DA0B1A60062C71E /* UnaCancion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = UnaCancion.mp3; sourceTree = "<group>"; };
+		FD02C3EC1DA0B1F80062C71E /* unaCancion.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = unaCancion.jpg; sourceTree = "<group>"; };
 		FD4A63ED1D9B67D600FD047A /* audioPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = audioPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD4A63F01D9B67D600FD047A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD4A63F51D9B67D600FD047A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -80,11 +84,13 @@
 				FD02C3D51DA03C100062C71E /* Las Transeuntes.mp3 */,
 				FD02C3E81DA09B980062C71E /* LaTrama.mp3 */,
 				FD02C3E21DA099600062C71E /* Noctiluca.mp3 */,
+				FD02C3EA1DA0B1A60062C71E /* UnaCancion.mp3 */,
 				FD02C3D81DA03C9E0062C71E /* jorgeDrexler.jpg */,
 				FD02C3D91DA03C9E0062C71E /* DondWorryAboutAThing.jpg */,
 				FD02C3DE1DA050B10062C71E /* noCoverImage.jpg */,
 				FD02C3E41DA0996D0062C71E /* noctiluca.jpg */,
 				FD02C3E61DA099790062C71E /* latrama.jpg */,
+				FD02C3EC1DA0B1F80062C71E /* unaCancion.jpg */,
 				FD02C3DC1DA03F870062C71E /* Song.swift */,
 				FD4A63F01D9B67D600FD047A /* AppDelegate.swift */,
 				FD4A64021D9B688800FD047A /* TableTableViewController.swift */,
@@ -159,7 +165,9 @@
 				FD02C3D71DA03C100062C71E /* Las Transeuntes.mp3 in Resources */,
 				FD4A63FB1D9B67D600FD047A /* LaunchScreen.storyboard in Resources */,
 				FD02C3E91DA09B980062C71E /* LaTrama.mp3 in Resources */,
+				FD02C3ED1DA0B1F80062C71E /* unaCancion.jpg in Resources */,
 				FD02C3E71DA099790062C71E /* latrama.jpg in Resources */,
+				FD02C3EB1DA0B1A60062C71E /* UnaCancion.mp3 in Resources */,
 				FD02C3E51DA0996D0062C71E /* noctiluca.jpg in Resources */,
 				FD02C3DB1DA03C9E0062C71E /* DondWorryAboutAThing.jpg in Resources */,
 				FD4A63F81D9B67D600FD047A /* Assets.xcassets in Resources */,

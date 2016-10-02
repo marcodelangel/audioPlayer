@@ -3,8 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Audio Player-->
@@ -69,6 +67,25 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="quh-ud-3d0">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="212" id="LJl-sG-QvT"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="212" id="bDT-sb-o6d"/>
+                                    <constraint firstAttribute="height" constant="214" id="iSu-Lm-KGJ"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="LJl-sG-QvT"/>
+                                        <exclude reference="bDT-sb-o6d"/>
+                                        <exclude reference="iSu-Lm-KGJ"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="LJl-sG-QvT"/>
+                                        <include reference="bDT-sb-o6d"/>
+                                        <include reference="iSu-Lm-KGJ"/>
+                                    </mask>
+                                </variation>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tNZ-IE-GMp">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
@@ -76,65 +93,116 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mt4-wm-PRb">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Play"/>
-                                <connections>
-                                    <action selector="play" destination="fG8-v6-oUI" eventType="touchUpInside" id="ImX-zE-0Tq"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vYL-T8-Paw">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Pause"/>
-                                <connections>
-                                    <action selector="pause" destination="fG8-v6-oUI" eventType="touchUpInside" id="Nvf-da-NM4"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pax-fw-yDf">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mt4-wm-PRb">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="46" id="DTb-gX-Eo0"/>
+                                    <constraint firstAttribute="height" constant="50" id="QYG-VM-AmT"/>
+                                    <constraint firstAttribute="width" constant="50" id="r4r-Y8-nJ3"/>
                                 </constraints>
-                                <state key="normal" title="Stop"/>
+                                <state key="normal" title="Play" image="playButton">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="DTb-gX-Eo0"/>
+                                        <exclude reference="QYG-VM-AmT"/>
+                                        <exclude reference="r4r-Y8-nJ3"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact">
                                     <mask key="constraints">
-                                        <include reference="DTb-gX-Eo0"/>
+                                        <include reference="QYG-VM-AmT"/>
+                                        <include reference="r4r-Y8-nJ3"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="play" destination="fG8-v6-oUI" eventType="touchUpInside" id="ImX-zE-0Tq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vYL-T8-Paw">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="579-Ae-sh0"/>
+                                    <constraint firstAttribute="width" constant="50" id="ToY-ev-f4y"/>
+                                </constraints>
+                                <state key="normal" title="Pause" image="pauseButton"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="579-Ae-sh0"/>
+                                        <exclude reference="ToY-ev-f4y"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="579-Ae-sh0"/>
+                                        <include reference="ToY-ev-f4y"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="pause" destination="fG8-v6-oUI" eventType="touchUpInside" id="Nvf-da-NM4"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="nLV-Va-rOL">
+                                <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="204" id="wxl-Hn-4iX"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="wxl-Hn-4iX"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="wxl-Hn-4iX"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="volumen" destination="fG8-v6-oUI" eventType="valueChanged" id="DmV-X8-fbn"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pax-fw-yDf">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="OtZ-ZC-95f">
+                                        <variation key="widthClass=compact" constant="49"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="50" id="Pnc-22-JB6">
+                                        <variation key="widthClass=compact" constant="57"/>
+                                    </constraint>
+                                </constraints>
+                                <state key="normal" title="Stop" image="stopButton"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="OtZ-ZC-95f"/>
+                                        <exclude reference="Pnc-22-JB6"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="OtZ-ZC-95f"/>
+                                        <include reference="Pnc-22-JB6"/>
                                     </mask>
                                 </variation>
                                 <connections>
                                     <action selector="stop" destination="fG8-v6-oUI" eventType="touchUpInside" id="KCU-Na-oeB"/>
                                 </connections>
                             </button>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="nLV-Va-rOL">
-                                <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
-                                <connections>
-                                    <action selector="volumen" destination="fG8-v6-oUI" eventType="valueChanged" id="DmV-X8-fbn"/>
-                                </connections>
-                            </slider>
                         </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="quh-ud-3d0" firstAttribute="top" secondItem="Is2-sH-Vvg" secondAttribute="bottom" constant="66" id="0qx-bu-FFE"/>
-                            <constraint firstItem="1HD-Qo-csP" firstAttribute="top" secondItem="quh-ud-3d0" secondAttribute="bottom" constant="258" id="1Md-Yn-zyt"/>
-                            <constraint firstItem="nLV-Va-rOL" firstAttribute="leading" secondItem="5za-TA-GNR" secondAttribute="leadingMargin" constant="123" id="3F1-eI-54K">
-                                <variation key="widthClass=compact" constant="74"/>
-                            </constraint>
-                            <constraint firstItem="mt4-wm-PRb" firstAttribute="baseline" secondItem="vYL-T8-Paw" secondAttribute="baseline" id="6F9-ON-96y"/>
-                            <constraint firstItem="vYL-T8-Paw" firstAttribute="centerX" secondItem="5za-TA-GNR" secondAttribute="centerX" id="C0t-xa-52l"/>
-                            <constraint firstItem="Pax-fw-yDf" firstAttribute="baseline" secondItem="vYL-T8-Paw" secondAttribute="baseline" id="Il3-FS-F6s"/>
-                            <constraint firstItem="mt4-wm-PRb" firstAttribute="leading" secondItem="quh-ud-3d0" secondAttribute="leading" id="JAW-39-nnb"/>
-                            <constraint firstItem="nLV-Va-rOL" firstAttribute="centerX" secondItem="5za-TA-GNR" secondAttribute="centerX" id="KcY-2g-IG1"/>
-                            <constraint firstItem="mt4-wm-PRb" firstAttribute="top" secondItem="quh-ud-3d0" secondAttribute="bottom" constant="84" id="Nio-h3-S1h"/>
-                            <constraint firstItem="Pax-fw-yDf" firstAttribute="trailing" secondItem="quh-ud-3d0" secondAttribute="trailing" id="OKp-PQ-JGA"/>
-                            <constraint firstItem="tNZ-IE-GMp" firstAttribute="centerX" secondItem="quh-ud-3d0" secondAttribute="centerX" id="Ro4-Ft-E7C"/>
-                            <constraint firstItem="tNZ-IE-GMp" firstAttribute="top" secondItem="quh-ud-3d0" secondAttribute="bottom" constant="18" id="S8W-iD-pXN"/>
-                            <constraint firstItem="quh-ud-3d0" firstAttribute="centerX" secondItem="5za-TA-GNR" secondAttribute="centerX" id="XWr-7m-xZV"/>
-                            <constraint firstItem="quh-ud-3d0" firstAttribute="leading" secondItem="5za-TA-GNR" secondAttribute="leadingMargin" constant="74" id="oIi-Wh-GiO"/>
-                            <constraint firstItem="nLV-Va-rOL" firstAttribute="top" secondItem="vYL-T8-Paw" secondAttribute="bottom" constant="48" id="ysj-Nj-cAE"/>
+                            <constraint firstItem="vYL-T8-Paw" firstAttribute="centerX" secondItem="5za-TA-GNR" secondAttribute="centerX" id="0QW-YA-t1I"/>
+                            <constraint firstItem="tNZ-IE-GMp" firstAttribute="top" secondItem="quh-ud-3d0" secondAttribute="bottom" constant="18" id="5Xi-x2-eoC"/>
+                            <constraint firstItem="tNZ-IE-GMp" firstAttribute="centerX" secondItem="5za-TA-GNR" secondAttribute="centerX" id="7L4-j5-EsK"/>
+                            <constraint firstItem="1HD-Qo-csP" firstAttribute="top" secondItem="quh-ud-3d0" secondAttribute="bottom" constant="256" id="D9z-w0-mRj"/>
+                            <constraint firstItem="Pax-fw-yDf" firstAttribute="top" secondItem="quh-ud-3d0" secondAttribute="bottom" constant="77" id="FCl-oy-ybm"/>
+                            <constraint firstItem="nLV-Va-rOL" firstAttribute="top" secondItem="vYL-T8-Paw" secondAttribute="bottom" constant="29" id="HiF-31-OSy"/>
+                            <constraint firstItem="vYL-T8-Paw" firstAttribute="top" secondItem="tNZ-IE-GMp" secondAttribute="bottom" constant="42" id="ISp-uA-i2R"/>
+                            <constraint firstItem="nLV-Va-rOL" firstAttribute="centerX" secondItem="5za-TA-GNR" secondAttribute="centerX" id="QWo-o3-cN2"/>
+                            <constraint firstItem="vYL-T8-Paw" firstAttribute="leading" secondItem="mt4-wm-PRb" secondAttribute="trailing" constant="23" id="Usv-hr-FTs"/>
+                            <constraint firstItem="quh-ud-3d0" firstAttribute="centerX" secondItem="5za-TA-GNR" secondAttribute="centerX" id="oAI-pF-K6w"/>
+                            <constraint firstItem="mt4-wm-PRb" firstAttribute="top" secondItem="quh-ud-3d0" secondAttribute="bottom" constant="81" id="sOs-r3-lLy"/>
+                            <constraint firstItem="Pax-fw-yDf" firstAttribute="leading" secondItem="vYL-T8-Paw" secondAttribute="trailing" constant="23" id="sP7-g6-gUy"/>
+                            <constraint firstItem="quh-ud-3d0" firstAttribute="top" secondItem="Is2-sH-Vvg" secondAttribute="bottom" constant="66" id="sUx-ai-ow3"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -142,25 +210,23 @@
                                 <exclude reference="tNZ-IE-GMp"/>
                                 <exclude reference="mt4-wm-PRb"/>
                                 <exclude reference="vYL-T8-Paw"/>
-                                <exclude reference="Pax-fw-yDf"/>
                                 <exclude reference="nLV-Va-rOL"/>
+                                <exclude reference="Pax-fw-yDf"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="0qx-bu-FFE"/>
-                                <exclude reference="XWr-7m-xZV"/>
-                                <exclude reference="oIi-Wh-GiO"/>
-                                <exclude reference="Ro4-Ft-E7C"/>
-                                <exclude reference="S8W-iD-pXN"/>
-                                <exclude reference="6F9-ON-96y"/>
-                                <exclude reference="JAW-39-nnb"/>
-                                <exclude reference="Nio-h3-S1h"/>
-                                <exclude reference="C0t-xa-52l"/>
-                                <exclude reference="Il3-FS-F6s"/>
-                                <exclude reference="OKp-PQ-JGA"/>
-                                <exclude reference="3F1-eI-54K"/>
-                                <exclude reference="KcY-2g-IG1"/>
-                                <exclude reference="ysj-Nj-cAE"/>
-                                <exclude reference="1Md-Yn-zyt"/>
+                                <exclude reference="oAI-pF-K6w"/>
+                                <exclude reference="sUx-ai-ow3"/>
+                                <exclude reference="5Xi-x2-eoC"/>
+                                <exclude reference="7L4-j5-EsK"/>
+                                <exclude reference="sOs-r3-lLy"/>
+                                <exclude reference="0QW-YA-t1I"/>
+                                <exclude reference="ISp-uA-i2R"/>
+                                <exclude reference="Usv-hr-FTs"/>
+                                <exclude reference="FCl-oy-ybm"/>
+                                <exclude reference="sP7-g6-gUy"/>
+                                <exclude reference="HiF-31-OSy"/>
+                                <exclude reference="QWo-o3-cN2"/>
+                                <exclude reference="D9z-w0-mRj"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -169,25 +235,23 @@
                                 <include reference="tNZ-IE-GMp"/>
                                 <include reference="mt4-wm-PRb"/>
                                 <include reference="vYL-T8-Paw"/>
-                                <include reference="Pax-fw-yDf"/>
                                 <include reference="nLV-Va-rOL"/>
+                                <include reference="Pax-fw-yDf"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="0qx-bu-FFE"/>
-                                <include reference="XWr-7m-xZV"/>
-                                <include reference="oIi-Wh-GiO"/>
-                                <include reference="Ro4-Ft-E7C"/>
-                                <include reference="S8W-iD-pXN"/>
-                                <include reference="6F9-ON-96y"/>
-                                <include reference="JAW-39-nnb"/>
-                                <include reference="Nio-h3-S1h"/>
-                                <include reference="C0t-xa-52l"/>
-                                <include reference="Il3-FS-F6s"/>
-                                <include reference="OKp-PQ-JGA"/>
-                                <include reference="3F1-eI-54K"/>
-                                <include reference="KcY-2g-IG1"/>
-                                <include reference="ysj-Nj-cAE"/>
-                                <include reference="1Md-Yn-zyt"/>
+                                <include reference="oAI-pF-K6w"/>
+                                <include reference="sUx-ai-ow3"/>
+                                <include reference="5Xi-x2-eoC"/>
+                                <include reference="7L4-j5-EsK"/>
+                                <include reference="sOs-r3-lLy"/>
+                                <include reference="0QW-YA-t1I"/>
+                                <include reference="ISp-uA-i2R"/>
+                                <include reference="Usv-hr-FTs"/>
+                                <include reference="FCl-oy-ybm"/>
+                                <include reference="sP7-g6-gUy"/>
+                                <include reference="HiF-31-OSy"/>
+                                <include reference="QWo-o3-cN2"/>
+                                <include reference="D9z-w0-mRj"/>
                             </mask>
                         </variation>
                     </view>
@@ -202,4 +266,9 @@
             <point key="canvasLocation" x="982.5" y="354"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="pauseButton" width="128" height="128"/>
+        <image name="playButton" width="102" height="102"/>
+        <image name="stopButton" width="128" height="128"/>
+    </resources>
 </document>

@@ -20,16 +20,19 @@ class TableTableViewController: UITableViewController {
         let sonido2Url = NSBundle.mainBundle().URLForResource("Las Transeuntes", withExtension: "mp3")
         let sonido3Url = NSBundle.mainBundle().URLForResource("LaTrama", withExtension: "mp3")
         let sonido4Url = NSBundle.mainBundle().URLForResource("Noctiluca", withExtension: "mp3")
+        let sonido5Url = NSBundle.mainBundle().URLForResource("UnaCancion", withExtension: "mp3")
         
        let songSample1 = Song(titulo: "I don't worry about a thing", url: sonido1Url, cover: UIImage(imageLiteral: "DondWorryAboutAThing.jpg"))
         let songSample2 = Song(titulo: "Las Transeuntes", url: sonido2Url, cover: UIImage(imageLiteral: "jorgeDrexler.jpg"))
         let songSample3 = Song(titulo: "La trama y el desenlace", url: sonido3Url, cover: UIImage(imageLiteral: "latrama.jpg"))
         let songSample4 = Song(titulo: "Noctiluca", url: sonido4Url, cover: UIImage(imageLiteral: "noctiluca.jpg"))
+        let songSample5 = Song(titulo: "Una canción me trajo hasta aquí", url: sonido5Url, cover: UIImage(imageLiteral: "unaCancion.jpg"))
         
         self.songs.append(songSample1)
         self.songs.append(songSample2)
         self.songs.append(songSample3)
         self.songs.append(songSample4)
+        self.songs.append(songSample5)
         
         
         // Uncomment the following line to preserve selection between presentations
