@@ -104,7 +104,8 @@ class TableTableViewController: UITableViewController {
             detailVC?.cover = shuffleSong.cover!
             detailVC?.tituloDeLaCancion = shuffleSong.titulo!
             detailVC?.songURL = shuffleSong.url!
-            
+            detailVC?.songList = songs
+            detailVC?.actualIndexSong = selectSong
         }
         
         if self.tableView.indexPathForSelectedRow?.section == 1{
@@ -113,6 +114,8 @@ class TableTableViewController: UITableViewController {
         detailVC?.cover = selectedSong.cover!
         detailVC?.tituloDeLaCancion = selectedSong.titulo!
         detailVC?.songURL = selectedSong.url!
+        detailVC?.songList = songs
+        detailVC?.actualIndexSong = ip!
         }
     }
     

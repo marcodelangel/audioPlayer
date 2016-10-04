@@ -19,6 +19,8 @@ class DetailViewController: UIViewController {
     var tituloDeLaCancion : String = "No song selected"
     var songURL = NSURL()
     @IBOutlet weak var volumeSlider: UISlider!
+    var songList = [Song] ()
+    var actualIndexSong = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,6 +69,36 @@ class DetailViewController: UIViewController {
         
         let volume = volumeSlider.value
         reproductor.volume = volume
+        
+    }
+    @IBAction func nextSong() {
+        
+        var nextSongToPlay = self.songList[actualIndexSong]
+        
+        if actualIndexSong == self.songList.count-1{
+            
+            actualIndexSong = 0
+            nextSongToPlay = self.songList[actualIndexSong]
+        
+        }else{
+            
+         actualIndexSong = self.actualIndexSong + 1
+        nextSongToPlay = self.songList[actualIndexSong]
+
+        }
+       
+        self.songURL = nextSongToPlay.url!
+        
+        do{
+            try reproductor =  AVAudioPlayer(contentsOfURL:songURL)
+        }catch{
+            print("Error en la reproducción")
+        }
+        reproductor.play()
+        self.tituloDeLaCancion = nextSongToPlay.titulo!
+        self.cover = nextSongToPlay.cover!
+        
+        self.viewDidLoad()
         
     }
     /*
